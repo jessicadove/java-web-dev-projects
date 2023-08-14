@@ -8,7 +8,12 @@ public class Area {
         Scanner input = new Scanner(System.in);
         double radius = input.nextDouble();
         double circleArea = Circle.getArea(radius);
-        System.out.println("The area of a circle with a radius of " + radius + " is: " + circleArea);
+        if ((radius <= 0) || (radius.isNan() == true) || (radius.isEmpty() == true)) {
+            System.out.println("Error. Please enter a numeric value.");
+        } else {
+            System.out.println("The area of a circle with a radius of " + radius + " is: " + circleArea);
+        }
+        input.close();
     }
 }
 
