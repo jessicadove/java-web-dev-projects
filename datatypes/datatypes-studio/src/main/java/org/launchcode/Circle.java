@@ -1,7 +1,7 @@
-package main.java.org.launchcode;
+package org.launchcode;
 
 public class Circle {
-    public static Double getArea(Double radius) {
+    public static double getArea(double radius) {
         return 3.14 * radius * radius;
     }
 }
