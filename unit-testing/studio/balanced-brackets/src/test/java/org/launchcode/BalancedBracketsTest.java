@@ -35,8 +35,33 @@ class BalancedBracketsTest {
         assertFalse(BalancedBrackets.hasBalancedBrackets("["));
     }
     @Test
-    public void stringWithEndBracketsReturnsFalse() {
+    public void backwardBracketsOnly() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]["));
+    }
+    @Test
+    public void stringWithBackwardBracketsReturnsFalse() {
         assertFalse(BalancedBrackets.hasBalancedBrackets("LaunchCode]["));
+    }
+    @Test
+    public void onlyEndBracketReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]"));
+    }
+    @Test
+    public void onlyMultipleBackwardBracketsReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]]][[["));
+    }
+    @Test
+    public void stringWithBackwardBracketsInsideStrReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("Launch]Code["));
+    }
+    @Test
+    public void stringWithBeginningBackwardBracketReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("][LaunchCode"));
+    }
+
+    @Test
+    public void onlyUnbalancedBracketsReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[[[]]"));
     }
 
 }
