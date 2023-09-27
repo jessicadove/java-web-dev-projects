@@ -10,5 +10,61 @@ class BalancedBracketsTest {
     public void emptyTest() {
         assertEquals(true, true);
     }
+<<<<<<< HEAD
+=======
+    @Test
+    public void onlyBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[]"));
+    }
+    @Test
+    public void stringWithEndBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("LaunchCode[]"));
+    }
+    @Test
+    public void stringWithBracketsInsideStrReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("Launch[Code]"));
+    }
+    @Test
+    public void stringWithBeginningBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[]LaunchCode"));
+    }
+    @Test
+    public void onlyMultipleBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[[[]]]"));
+    }
+    @Test
+    public void onlyOpenBracketReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("["));
+    }
+    @Test
+    public void backwardBracketsOnly() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]["));
+    }
+    @Test
+    public void stringWithBackwardBracketsReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("LaunchCode]["));
+    }
+    @Test
+    public void onlyEndBracketReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]"));
+    }
+    @Test
+    public void onlyMultipleBackwardBracketsReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]]][[["));
+    }
+    @Test
+    public void stringWithBackwardBracketsInsideStrReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("Launch]Code["));
+    }
+    @Test
+    public void stringWithBeginningBackwardBracketReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("][LaunchCode"));
+    }
+
+    @Test
+    public void onlyUnbalancedBracketsReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[[[]]"));
+    }
+>>>>>>> 462fc3e969382ac35647374134c0daec1011b119
 
 }
