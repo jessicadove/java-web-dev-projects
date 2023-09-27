@@ -10,4 +10,5 @@ class BalancedBracketsTest {
     public void emptyTest() {
         assertEquals(true, true);
     }
+
 }

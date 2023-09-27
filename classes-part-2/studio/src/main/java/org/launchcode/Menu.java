@@ -8,7 +8,6 @@ public class Menu {
     private ArrayList<MenuItem> items;
 
     public Menu(Date d, ArrayList<MenuItem> i) {
-        //testing git
         this.lastUpdated = d;
         this.items = i;
     }
